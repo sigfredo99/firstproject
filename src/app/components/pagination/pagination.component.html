@@ -1,0 +1,33 @@
+
+<h1 class="text-center text-success pt-3 font-weight-bold">Angular Material Pagination</h1>
+<div class="m-5">
+    <mat-paginator 
+    class="text-success font-weight-bold"
+    [length]="datos.length"
+    [pageSize]="page_size"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="handlePage($event)"
+    showFirstLastButtons>
+    </mat-paginator>
+    
+    <table class="table table-striped">
+        <thead class="bg-success text-white text-center">
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>UserID</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            <tr *ngFor='let user of datos | paginate:page_size:page_number'>
+                <th>{{ user.id }}</th>
+                <td>{{ user.title }}</td>
+                <td>{{ user.userId }}</td>
+                <td>{{ user.completed }}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+

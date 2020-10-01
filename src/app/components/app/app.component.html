@@ -1,0 +1,20 @@
+
+<!--
+    Siempre que queramos ejecutar una funcion que nos esta mandando el componente
+    hijo daremos el nombre de la función entre parentesis ejemplo: (borrar)
+    ademas de eso colocaremos a continuación el nombre de la función 
+    que queramos ejecutar en nuestro componente padre ademas de pasarle entre
+    parentesis la variable event de la siguiente manera miFuncion($event)
+    esta variable es importante ya que en esta variable se guarda los datos que
+    nos esta enviando el componente hijo
+-->
+<!--PASANDO DATOS ENTRE COMPONENTES CON DECORADORES INPUT Y OUTPUT -->
+<!--<app-user [data]="user" (borrar)="borrarUsuario($event)" *ngFor="let user of usuarios"></app-user> -->
+<!--PASANDO DATOS ENTRE COMPONENTES CON EL DECORADOR HOST ENVEZ DE OUTPUT-->
+<!--<app-user [data]="user" *ngFor="let user of usuarios"></app-user>-->
+<app-pagination></app-pagination>
+<!--<ng-container>
+<app-header></app-header>
+<app-tipousuarios ></app-tipousuarios>
+</ng-container>-->
+

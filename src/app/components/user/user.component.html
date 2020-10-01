@@ -1,0 +1,18 @@
+<!-- la etiqueta ng-container y ng-template no nos creara
+una etiqueta en nuestro navegador
+es decir solo nos sirve para agrupar
+elementos y ejecutar funciones de manera mas sencilla 
+
+IMPORTANTE: los metodos de angular siempre son ng
+seguidos de una letra mayuscula, por ejemplo ngIf la palabra
+If iria la primera letra con mayuscula, de otra forma no
+servira-->
+<div class="left">{{user.username}}</div>
+<div class="right">
+    <button (click)="BorrarUsuario(user.id)">Borrar</button>
+</div>
+
+        <!--NOTA: Al utilizar ngFor siempre se debe usar el tipo de 
+        vaiable let, esta siempre tomará el tipo de variable que
+        tengamos en la otra variable que le estamos pasando, se un array
+        con objetos etc-->

@@ -1,0 +1,41 @@
+@import '~src/app/shared/variables.sass'
+
+.body
+    background-color: $base-color
+    background-image: url('/assets/img/login-pattern.png')
+    background-size: 30%
+    min-height:100vh
+    display: flex
+    flex: 1
+    align-items: center
+    justify-content: center
+
+.btn
+    background-color: $base_color
+    &:hover
+        background-color: $base-hover-color
+
+.base-color-text
+    color: $base-color
+
+
+
+.card
+    box-shadow: 1px 2px 25px -9px rgba(0,0,0,0.85)
+    width: 40%
+    align-items: center
+    min-height: 40vh
+    .card-body, .card-header
+        width: 100%
+        h4
+            font-size: 150%
+            padding: 8px
+
+
+.form-signin 
+    border: 10px
+    width: 100%
+    padding: 15px
+    .form-control, .input-group-text
+        font-size: 110%
+      

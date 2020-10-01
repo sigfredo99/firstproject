@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+        Sistema Angular
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+    (click)="toggleCollapsed()">
+   <span class="navbar-toggler-icon"></span>
+ </button>
+ <div id="navbarSupportedContent" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Usuarios</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Tipo Usuarios</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Productos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Ventas</a>
+        </li>
+      </ul>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+</div>
+
+  </nav>
+

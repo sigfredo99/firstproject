@@ -1,0 +1,25 @@
+<!--En Angular es importante pasar el nombre de los eventos sin
+el prefijo "on" por ejemplo si queremos en html el el evento
+para un clic seria el onClick=mifuncion() en Angular solo 
+pondriamos solo click entre parentesis por ejemplo
+(click)="mifuncion()" -->
+
+<!--
+    (ngModelChangue)="log($event)"
+-->
+<!--Si queremos usar los atributos de html tendremos que 
+ponerlo entre [] es decir si normalmente haciamos un
+type="submit" en Angular seria [type]="submit"-->
+<h2>Probando Atributos, Eventos y ngModel</h2>
+<button [disabled]="desactivado">Titulo</button><br><br>
+<button (click)="desactivado=!desactivado">Cambiar Desactivado</button>
+<p>Tu texto: 
+    {{titulo}}</p>
+<input type="text" [(ngModel)]="titulo"/>
+<p>Haz seleccionado el estado: {{seleccion}}</p>
+
+<select [(ngModel)]="seleccion">
+    <option value="Activo">Activo</option>
+    <option value="Inactivo">Inactivo</option>
+</select>
+

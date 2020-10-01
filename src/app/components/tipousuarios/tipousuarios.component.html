@@ -1,0 +1,45 @@
+<!--El campo.value nos devuelve los datos del formulario en formato JSON-->
+
+<div class="row">
+    <div class="column">
+        <h2>Tipo de usuarios</h2>
+    </div>
+    <div class="column">
+        
+        <input type="text">
+        <button>Buscar</button>
+    </div>
+
+</div>
+
+
+<button class="right">Nuevo</button>
+
+
+
+<br><br>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+    </tr>
+    <tr *ngFor="let tipousuario of _tipousuario.tipousuarios">
+        <td>{{tipousuario.id_tipousuario}}</td>
+        <td>{{tipousuario.nombre}}</td>
+    </tr>
+</table>
+<ng-container *ngIf="add">            
+    <form [formGroup]="FormularioTipoUsuario" (ngSubmit)="enviar(FormularioTipoUsuario.value)">
+        <label>Nombre: </label>
+        <input formControlName="nombre" type="text" />
+        <div *ngIf="FormularioTipoUsuario.get('nombre').hasError('required') && FormularioTipoUsuario.get('nombre').touched">
+            <p>Porfavor introduzca un nombre</p>
+        </div>
+        <br> <br>
+        
+        <!--El disabled .invalid es para que el boton no este habilitado hasta
+        que tengamos completado el formulario con datos validos-->
+        <button [disabled]="FormularioTipoUsuario.invalid" type="submit">Guardar</button>
+    </form>
+</ng-container>
+

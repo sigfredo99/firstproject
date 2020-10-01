@@ -1,0 +1,69 @@
+
+<div class="container text-center">
+    <h1 class="m-4 text-dark font-weight-bold text-uppercase">Uso de Subjects en Angular</h1>
+    <p><span class="font-weight-bold">NOTA: </span>Ver la consola para notar la diferencia</p>
+    <div class="row mt-3">
+      <div class="col-6 ">
+          <div class="card text-center">
+            <div class="card-header bg-danger text-white">
+                <h3 class="font-weight-bold">Subject</h3>
+            </div>
+            <div class="card-body  bg-light">
+                <button class="btn btn-primary" (click)="siguiente('N')">Siguiente Valor</button>
+                <button class="btn btn-danger" (click)="completar('N')">Completar Tarea</button>
+                <h5 class="mt-3">Con variable asignada (numero):</h5>
+                <h5 class="font-weight-bold">{{numero}}</h5>
+                <h5>Con pipe async:</h5>
+                <h5 class="font-weight-bold">{{ numeroSubject | async}}</h5>
+            </div>
+          </div>
+      </div>
+      <div class="col-6 ">
+        <div class="card text-center">
+          <div class="card-header bg-warning text-white">
+              <h3 class="font-weight-bold"> Behavior Subject</h3>
+          </div>
+          <div class="card-body  bg-light">
+              <button class="btn btn-primary" (click)="siguiente('B')">Siguiente Valor</button>
+              <button class="btn btn-danger" (click)="completar('B')">Completar Tarea</button>
+              <h5 class="mt-3">Con variable asignada (numero):</h5>
+              <h5 class="font-weight-bold">{{numeroB}}</h5>
+              <h5>Con pipe async:</h5>
+              <h5 class="font-weight-bold">{{ numeroBSubject | async}}</h5>
+          </div>
+        </div>
+    </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-6 ">
+            <div class="card text-center">
+              <div class="card-header bg-success text-white">
+                  <h3 class="font-weight-bold">Replay Subject</h3>
+              </div>
+              <div class="card-body  bg-light">
+                  <button class="btn btn-primary" (click)="siguiente('R')">Siguiente Valor</button>
+                  <button class="btn btn-danger" (click)="completar('R')">Completar Tarea</button>
+                  <h5 class="mt-3">Con variable asignada (numero):</h5>
+                  <h5 class="font-weight-bold">{{numeroR}}</h5>
+                  <h5>Con pipe async:</h5>
+                  <h5 class="font-weight-bold">{{ numeroRSubject | async}}</h5>
+              </div>
+            </div>
+        </div>
+        <div class="col-6 ">
+          <div class="card text-center">
+            <div class="card-header bg-info text-white">
+                <h3 class="font-weight-bold">Async Subject</h3>
+            </div>
+            <div class="card-body  bg-light">
+                <button class="btn btn-primary" (click)="siguiente('A')">Siguiente Valor</button>
+                <button class="btn btn-danger" (click)="completar('A')">Completar Tarea</button>
+                <h5 class="mt-3">Con variable asignada (numero):</h5>
+                <h5 class="font-weight-bold">{{numeroA}}</h5>
+                <h5>Con pipe async:</h5>
+                <h5 class="font-weight-bold">{{ numeroASubject | async}}</h5>
+            </div>
+          </div>
+      </div>
+      </div>
+  </div>
